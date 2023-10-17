@@ -732,5 +732,5 @@ The privileged account should be managed by a multi-sig account.
 
 The PancakeSwap Prediction V3 design and implementation have been examined in this audit. On the Binance Smart Chain, PancakeSwap is the top decentralized exchange with a significant market share. One of the main features of PancakeSwap, which is intended to be a decentralized BNB price prediction platform, is the PancakeSwapPredictionV2 protocol. The user can benefit from changes in the price of BNB. The PancakeSwap Prediction V3 protocol contributes to the current DeFi environment while also enhancing the PancakeSwap ecology. The present code base is cleanly organized and has a good organization. Those faults are swiftly verified and possible recommendation are spelt out.
 
-In the meantime, it's important to note that the development of smart contracts as a whole is still in its early but exciting stages. This study would highly appreciate any constructive criticism or comments on this report's methodology, audit findings, or potential  gaps in this study.
+In the meantime, it's important to note that the development of smart contracts as a whole is still in its early but exciting stages. This study would highly appreciate any constructive criticism or comments on this report's methodology, audit findings, or potential  gaps in this study..
 
