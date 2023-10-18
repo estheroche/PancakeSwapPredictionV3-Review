@@ -45,6 +45,11 @@
   - [2.28 \_getPriceFromOracle():](#228-_getpricefromoracle)
   - [2.29 \_isContract(address account):](#229-_iscontractaddress-account)
   - [2.29.1 SUMMARY](#2291-summary)
+- [2.29.2 Methodology](#2292-methodology)
+  - [Code Review:](#code-review)
+  - [Automated Analysis:](#automated-analysis)
+  - [Manual Testing:](#manual-testing)
+  - [Best Practices Assessment:](#best-practices-assessment)
 - [3. Findings](#3-findings)
 - [Definition of the Severity in the Smart Contract](#definition-of-the-severity-in-the-smart-contract)
     - [High Severity:](#high-severity)
@@ -81,6 +86,7 @@
   - [Description](#description-5)
   - [Recommendation](#recommendation-4)
 - [5.0 CONCLUSION](#50-conclusion)
+- [References](#references)
 
 
 
@@ -340,6 +346,24 @@ This is an internal view function that checks whether the specified address is a
 
 ## 2.29.1 SUMMARY
 PancakeSwap V3 Prediction contract is for a prediction market, where users can bet on the outcome of the price of BNB or CAKE in the future. The events are grouped into epochs. Each round is associated with a specific period of time. Users can place bets on the outcome of a round by calling the betBear or betBull function, which takes the epoch, round ID, and outcome as parameters. The amount bet is transferred to the contract, and the user's bet is recorded. Once the round is complete, the executeRound function is called to determine and record the outcome of the round. Users can withdraw their winnings by calling the claim function, which transfers their reward to their account. There are also several internal functions that are used to manage the rounds and ensure that bets can only be placed during certain time periods. These functions include _bettable, _safeLockRound, _safeStartRound, and _startRound. The contract also includes some additional features, such as the ability to cancel a round and a check to ensure that a user is not a contract.
+
+# 2.29.2 Methodology
+
+The security audit of the PancakeSwap Prediction V3 Contract involved a rigorous and systematic review of the contract codebase. The audit process included:
+
+## Code Review: 
+Thorough examination of the smart contract code to identify potential security vulnerabilities and areas for improvement.
+
+## Automated Analysis: 
+
+Utilizing White-Box Audit Approach and techniques to identify common vulnerabilities such as reentrancy, overflow, and underflow.
+
+## Manual Testing: 
+
+Simulating various scenarios to validate the contract's functionality and verify that it behaves as intended under different conditions.
+
+## Best Practices Assessment: 
+Evaluating the adherence of the contract to industry best practices in smart contract development.
 
 # 3. Findings
 
@@ -734,3 +758,9 @@ The PancakeSwap Prediction V3 design and implementation have been examined in th
 
 In the meantime, it's important to note that the development of smart contracts as a whole is still in its early but exciting stages. This study would highly appreciate any constructive criticism or comments on this report's methodology, audit findings, or potential  gaps in this study..
 
+# References
+
+1. Security-Bridge(2023), Types of Security Audits. https://www.securitybrigade.com/types-of-security-audits/
+
+2. CWE CATEGORY: Bad Coding Practices.https://cwe.mitre.org/data/definitions/ 1006.html.
+3. OWASP. Risk Rating Methodology.https://www.owasp.org/index.php/OWASP_Risk_Rating_ Methodology.
